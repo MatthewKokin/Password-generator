@@ -18,7 +18,7 @@ def generate_password(length):
     all_characters = string.ascii_letters + string.digits + string.punctuation
     ourcharacters = []
     e = 0
-    # change2
+    # change3
     #print(req)
     while e < len(req):
         Req = req.split()
