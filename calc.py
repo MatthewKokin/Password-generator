@@ -10,7 +10,7 @@ leng = int(input("Enter password length u want: "))
 req = str(input("Please specify any necessary characters. List them with spaces and if any are required multiple times, write the number of times they are required next to the character without a space, for example r &3 4 means one r, three & symbols and on;"))
 #omit = int(input("Please specify any characters that cannot be used. Again, list them with spaces between each: "))
 
-# asdasdas
+# asdasdasfdf
 
 
 def generate_password(length):
