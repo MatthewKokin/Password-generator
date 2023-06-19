@@ -1,3 +1,6 @@
+
+# Replacing Chat GPT code with Toms code
+
 from flask import Flask, request, render_template
 import random
 import string
