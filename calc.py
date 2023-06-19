@@ -72,18 +72,15 @@ import random
 import string
 from random import shuffle
 
-#password_length = int(input("Minimum password length: "))
-
-
 leng = int(input("Enter password length u want: "))
 #numb = int(input("Enter how many numbers you want: "))
 #cap = int(input("Enter how many upper case letters you want: "))
 #spec = int(input("Enter how many special characters you want: "))
 req = str(input("Please specify any necessary characters. List them with spaces and if any are required multiple times, write the number of times they are required next to the character without a space, for example r &3 4 means one r, three & symbols and on;"))
 #omit = int(input("Please specify any characters that cannot be used. Again, list them with spaces between each: "))
+
 def generate_password(Length, Required):
     def reqcharac(length, required):
-
         global all_characters
         all_characters = string.ascii_letters + string.digits + string.punctuation
         ourcharacters = []
@@ -93,22 +90,15 @@ def generate_password(Length, Required):
             if Req[e] != " ":
                 ourcharacters.append(Req[e])
                 d = e + 1
-
                 number = 0
-
                 if d < len(Req):
-
                     while Req[d] != " ":
-
                         number = number + 1
                         if d < len(Req) - 1:
                             d = d + 1
                         else:
                             break
-
                     multiplier = 0
-
-
                     f = 1
                     while f <= number:
                         q = int(Req[e + f]) * 10**(number - f)
@@ -123,20 +113,13 @@ def generate_password(Length, Required):
 
                 else:
                     e = e + 1
-
-
-
-
             else:
                 e = e + 1
-
         global len_oc
         len_oc = len(ourcharacters)
         return(ourcharacters)    
 
-
     our_characters = reqcharac(Length, Required)
-
     remaining = leng - len_oc
     i = 0
     while i < remaining:
@@ -144,9 +127,8 @@ def generate_password(Length, Required):
         our_characters.append(rem_char)
         i = i + 1
     shuffle(our_characters)
-
-
     password = ''
     Password = (password.join(our_characters))
     return Password
+
 print(generate_password(leng, req))
