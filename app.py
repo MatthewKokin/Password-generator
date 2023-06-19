@@ -20,8 +20,9 @@ def generate_password():
     password = []
 
     # Add special characters
-    for char in special_chars:
-        password.append(char)
+    if special_chars:   # Check if special_chars is not None
+        for char in special_chars:
+            password.append(char)
 
     # Fill the remaining length with random characters
     remaining_length = length - len(password)
@@ -32,6 +33,11 @@ def generate_password():
     random.shuffle(password)
     
     password = ''.join(password)
+
+    # Return the rendered template and pass the password to it
+    return render_template('index.html', password=password)
+
+
 
 
 if __name__ == "__main__":
