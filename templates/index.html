@@ -11,8 +11,8 @@
             <label for="length">Password length:</label><br>
             <input type="text" id="length" name="length" placeholder="Enter the password length"><br>
 
-            <label for="special-characters">Special Characters:</label><br>
-            <input type="text" id="special-characters" name="special-characters" placeholder="Enter special characters"><br>
+            <label for="special-characters">Required Characters:</label><br>
+            <input type="text" id="special-characters" name="special-characters" placeholder="Enter any required characters"><br>
 
             {% if password %}
                 <div class="password-container">
@@ -25,8 +25,8 @@
 
         <div class="important-box">
             <h3>Important!</h3>
-            <p>Please list all special characters you want with spaces in between.
-                If you need more than one special character of the same type write
+            <p>Please list all required characters you want with spaces in between.
+                If you need more than one required character of the same type write
                 the number of times they are required next to the character without a space.
                 </p>
         </div>
