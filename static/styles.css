@@ -4,10 +4,14 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    /* Remove align-items: center; */
+    /* Add the following */
+    align-items: flex-start; /* aligns the child elements to the start of the body, which is the top */
+    min-height: 100vh; /* ensures the body has at least the height of the viewport */
+    overflow: auto; /* allows scrolling if the contents of the body exceed its height */
     background-color: #f4f4f4;
 }
+
 
 form {
     display: flex;
@@ -52,7 +56,8 @@ p {
 }
 
 .container {
-    width: 400px;
+    width: 450px;
+    margin-bottom: 50px; /* adjust this value as needed */
 }
 
 h2 {
@@ -92,3 +97,50 @@ h2 {
     background-color: #0056b3;
 }
 
+
+
+/* Imortant box */
+
+.important-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background-color: #F8F9FA; /* A light grey color */
+}
+
+.important-box h3 {
+    color: #007BFF;
+    margin: 0;
+    font-size: 15px
+}
+
+.important-box p {
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+/* Imortant box 2*/
+
+.important-box2 {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ff8000;
+    border-radius: 5px;
+    background-color: #F8F9FA; /* A light grey color */
+}
+
+.important-box2 h3 {
+    color: #ff8000;
+    margin: 0;
+    font-size: 15px
+}
+
+.important-box2 p {
+    color: #ff8000;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: justify;
+}
