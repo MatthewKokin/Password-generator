@@ -3,7 +3,6 @@ import random
 import string
 
 app = Flask(__name__)
-app.run(debug=True)
 
 @app.route('/')
 def home():
