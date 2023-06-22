@@ -32,8 +32,10 @@ while True:
     current_time = datetime.now()
     u = 0
     while u < len(datetimes):
-        if current_time > datetime_obj:
+        if current_time > datetimes(u):
             print("alarm")
             datetimes.remove(datetimes(u))
             break
+        else:
+            u = u + 1
     time.sleep(0.1)
